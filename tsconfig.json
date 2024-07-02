@@ -32,11 +32,11 @@
     "noUnusedParameters": false, //未读取函数参数时(只提示不报错)
     "noFallthroughCasesInSwitch": true, //防止switch语句贯穿(即如果没有break语句后面不会执行)
     "moduleResolution": "Node", //模块解析策略
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["/src/*"]
+      "@/*": ["src/*"]
     }
   },
-  "include": ["/src/**/*"],
+  "include": ["src/**/*.ts","src/**/*.d.ts","src/**/*.tsx","src/**/*.vue"],
   "exclude": ["node_modules", "package.json"]
 }
