@@ -1,0 +1,42 @@
+{
+  "files": [],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "compilerOptions": {
+    "diagnostics": true, //生成后输出编译器性能信息(打印报告)
+    "target": "ESNext", //js 语言版本，并包含兼容的库声明
+    "module": "ESNext", //生成代码的模块化标准
+    "allowJs": false, //ts js混用
+    "checkJs": false, //在类型检查的 js 文件中启用错误报告。
+    "declaration": true, //生成.d.ts文件
+    "declarationDir": "./dist", //指定生成.d.ts文件的输出目录
+    "emitDeclarationOnly": false, //只生成声明文件，而不会生成js文件
+    "sourceMap": false, //生成相应的.map文件
+    "inlineSourceMap": false, //在编译的 js 中包含源映射文件。
+    "inlineSources": false, //将代码与源映射文件生成到一个文件中，要求同时设置了 --inlineSourceMap 或 --sourceMap
+    "removeComments": true, //删除编译后的js文件中的注释
+    "noEmit": false, //不生成输出文件 也就是不生成js文件
+    "noEmitOnError": true, //有错误时不生成js文件
+    "downlevelIteration": false, //如果报告任何类型检查错误，不生成js文件
+    "resolveJsonModule": true,
+    "strict": true, //启用所有严格类型检查选项。
+    "alwaysStrict": true, //每个js文件都注入“use strict”(严格模式)
+    "noImplicitAny": false, //在表达式和声明上有隐含的any类型时报错。
+    "strictNullChecks": true, //严格的null检查 不允许吧null,undefined赋值别的变量
+    "strictFunctionTypes": true, //不允许函数参数双向协变
+    "strictPropertyInitialization": false, //类的实例属性必须初始化
+    "experimentalDecorators": true, //启用实验性的ES装饰器。
+    "esModuleInterop": true, //支持CommonJS和ES模块之间的互操作性。
+    "strictBindCallApply": true, //严格检查call,apply,bind
+    "noImplicitThis": true, //不允许this有隐式any
+    "noUnusedLocals": true, //有未使用的变量时，(只提示不报错)
+    "noUnusedParameters": false, //未读取函数参数时(只提示不报错)
+    "noFallthroughCasesInSwitch": true, //防止switch语句贯穿(即如果没有break语句后面不会执行)
+    "moduleResolution": "Node", //模块解析策略
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["/src/*"]
+    }
+  },
+  "include": ["/src/**/*"],
+  "exclude": ["node_modules", "package.json"]
+}
